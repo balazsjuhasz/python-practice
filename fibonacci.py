@@ -1,7 +1,7 @@
 def fib(number):
     a = 0
     b = 1
-    for i in range(number):
+    for _ in range(number):
         yield a
         temp = a
         a = b
@@ -14,7 +14,7 @@ def fib2(number):
     a = 0
     b = 1
     result = []
-    for i in range(number):
+    for _ in range(number):
         result.append(a)
         temp = a
         a = b
