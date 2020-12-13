@@ -1,4 +1,5 @@
 import utility
-import shopping.shopping_cart
+from shopping import shopping_cart
 
-print(shopping.shopping_cart.buy('apple'))
+if __name__ == "__main__":
+    print(shopping_cart.buy('apple'))
