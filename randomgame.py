@@ -6,10 +6,15 @@ end = int(sys.argv[2])
 number = random.randint(start, end)
 
 while True:
-    answer = int(input(f'Guess a number between {start} and {end}: '))
+    try:
+        answer = int(input(f'Guess a number between {start} and {end}: '))
 
-    if answer == number:
-        print('You guessed correctly.')
-        break
+        if answer == number:
+            print('You guessed correctly.')
+            break
 
-    print(f'Wrong answer, please try again')
+        print(f'Wrong answer, please try again')
+
+    except ValueError:
+        print('Please enter a valid number')
+        continue
