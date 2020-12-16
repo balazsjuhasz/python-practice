@@ -3,11 +3,7 @@ import main
 
 
 class TestMain(unittest.TestCase):
-    def setUp(self):
-        print('about to test a function')
-
     def test_do_stuff(self):
-        #'''  HIII!!!!!  '''
         test_param = 10
         result = main.do_stuff(test_param)
         self.assertEqual(result, 15)
@@ -31,10 +27,6 @@ class TestMain(unittest.TestCase):
         test_param = 0
         result = main.do_stuff(test_param)
         self.assertEqual(result, 5)
-
-    def tearDown(self):
-        print('cleaning up')
-
 
 if __name__ == "__main__":
     unittest.main()
